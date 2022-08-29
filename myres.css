@@ -47,7 +47,8 @@ height:700px;
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: rgb(249, 123, 139);
+  /* border-top-color: rgb(249, 123, 139); */
+  border-top-color:indianred;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
