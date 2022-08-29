@@ -10,6 +10,9 @@ background-repeat:no-repeat;
 width:100%;
 height:700px;
 }
+.me34{
+  display:none;
+}
 .menu{
 	background-color:indianred;
 	flex:100%;
@@ -20,6 +23,89 @@ height:700px;
   position: sticky;
   top: 0;
 }
+.preloader.fade {
+  opacity: 0;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  z-index: 99999;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: rgb(249, 123, 139);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: rgb(108, 108, 229);
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: rgb(249, 215, 76);
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 button {
     animation: wiggle 2s linear infinite;
   }
@@ -114,6 +200,91 @@ h1{
   }
 .me li:hover{
 	border-bottom:2px solid white;
+}
+.experience {
+  height: auto;
+  padding: 30px 0;
+  background-color: var(--background);
+}
+.experience h2{
+  display:flex;
+  justify-content: center;
+}
+/* var(--secondary-background) */
+.timeline {
+  position: relative;
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 20px;
+  background-color: rgba(205, 92, 92, 0.29);
+  overflow: hidden;
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+}
+
+.timeline .timeline-container {
+  padding-left: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  
+  width: 100%;
+}
+
+.timeline .timeline-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.timeline.edu .timeline-container::after {
+  content: "🎓";
+  background: var(--secondary-background);
+  font-family: "simple-line-icons";
+  font-size: 24px;
+  color: #FF4C60;
+  position: absolute;
+  left: -7px;
+  top: 0;
+  z-index: 1;
+}
+
+.timeline.exp .timeline-container::after {
+  content: "💼";
+  background: var(--secondary-background);
+  font-family: "simple-line-icons";
+  font-size: 24px;
+  color: #FF4C60;
+  position: absolute;
+  left: -7px;
+  top: 0;
+  z-index: 1;
+}
+
+.timeline .content {
+  position: relative;
+  /* background-color: var(--secondary-background); */
+}
+
+.timeline .content .time {
+  color: #8B88B1;
+  font-size: 14px;
+}
+
+.timeline .content h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: var(--font-color);
+}
+
+.timeline .content p {
+  margin: 0;
+  color: var(--font-color);
+}
+
+.timeline span.line {
+  position: absolute;
+  width: 1px;
+  background-color: #FF4C60;
+  top: 30px;
+  bottom: 30px;
+  left: 34px;
 }
 .ime{
 	flex:30%;
@@ -330,6 +501,10 @@ text-align: center;}
 .skills .skills-content .boxes .per{
     font-size: 60px;
     color: crimson ;
+}
+.row{
+  display: flex;
+  gap: 3rem;
 }
 .skills .skills-content .left .experience{
         display: flex;
@@ -577,6 +752,21 @@ footer{
   h1{
 	  text-align:center;
   }
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.timeline {
+  width:100%;
+  position: relative;
+  padding: 0px;
+  margin: 0px auto;
+  border-radius: 20px;
+  background-color: var(--secondary-background);
+  overflow: hidden;
+  box-shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+}
   .header{
 	  display:flex;
 	  flex-wrap:wrap;
